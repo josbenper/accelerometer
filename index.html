@@ -36,7 +36,7 @@ ac.innerHTML = "";
 navigator.accelerometer.getCurrentAcceleration(
 onAccelSuccess, onAccelFailure);
 } else {
-alert("Please wait,\nPhoneGap is not ready.");
+alert("Espere por favor,\nPhoneGap no esta listo.");
 }
 }
 function onAccelSuccess(accel) {
@@ -46,25 +46,24 @@ function onAccelSuccess(accel) {
 var d = new Date(accel.timestamp);
 //Then replace the page's content with the
 //current acceleration retrieved from the API
-ac.innerHTML = "<b>Current acceleration</b><hr />X: " +
+ac.innerHTML = "<b>Aceleracion actual</b><hr />X: " +
 accel.x + "<br />Y: " + accel.y + "<br />Z: " +
-accel.z + "<br />Timestamp: " + d.toLocaleString() +
-"<hr />Click the button to refresh.";
+accel.z + "<br />Fecha y hora: " + d.toLocaleString() +
+"<hr />Presiona el boton para refrescar.";
 }
 function onAccelFailure() {
-alert("Accelerometer error!");
+alert("Error en el aceleroletro!");
 }
 </script>
 
 </head>
 <body onload="onBodyLoad()">
 <h1>Example 10-1</h1>
-<p>This is a PhoneGap application that measures
-Device acceleration using the Accelerometer API.</p>
+<p>ESta es mi primera aplicacio de PhoneGap, obtione informacion del acelerometro gracias a la API del acelerometro.</p>
 <p><input type="button"
-value="Refresh Orientation" onclick="getAcceleration();">
+value="Refrescar orientacion" onclick="getAcceleration();">
 </p>
-<p id="accelInfo">Nothing to see here (yet),
-click the button.</p>
+<p id="accelInfo">Nada para mostrar,
+presiona el boton.</p>
 </body>
 </html>
